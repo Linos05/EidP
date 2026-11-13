@@ -18,7 +18,7 @@ int main()
     ku = 2 * r * pi;
 
     //Kreisfläche (kf)
-    kf = (r * r) pi;
+    kf = (r * r) * pi;
 
     //Kugeloberfläche (kgo)
     kgo = 4 * (r * r) * pi;
@@ -26,7 +26,12 @@ int main()
     //Kugelvolumen (kgv)
     kgv = (4 / 6) * (r * r * r) * pi;
 
-
+    //Ausgabe
+    std::cout << "Für die Ausgabe: " << std::endl;
+    std::cout << "Kreisumfang, drücken Sie die 1" << std::endl;
+    std::cout << "Kreisfläche, drücken Sie die 2" << std::endl;
+    std::cout << "Kugeloberfläche, drücken Sie die 3" << std::endl;
+    std::cout << "Kugelvolumen, drücken Sie die 4" <<std::endl;
     
     return 0;
 }
