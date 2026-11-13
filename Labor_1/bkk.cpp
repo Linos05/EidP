@@ -8,6 +8,7 @@ int main()
 
     //Variablendeklaration
     double r, ku, kf, kgo, kgv;
+    int ausgabe;
 
     //Eingabe
     std::cout << "Geben Sie einen Radius an" << std::endl << std::endl;
@@ -27,11 +28,17 @@ int main()
     kgv = (4 / 6) * (r * r * r) * pi;
 
     //Ausgabe
-    std::cout << "Für die Ausgabe: " << std::endl;
-    std::cout << "Kreisumfang, drücken Sie die 1" << std::endl;
-    std::cout << "Kreisfläche, drücken Sie die 2" << std::endl;
-    std::cout << "Kugeloberfläche, drücken Sie die 3" << std::endl;
-    std::cout << "Kugelvolumen, drücken Sie die 4" <<std::endl;
+    std::cout << "Für die Ausgabe: " << std::endl << std::endl;
+    std::cout << "Kreisumfang, drücken Sie die 1" << std::endl << std::endl;
+    std::cout << "Kreisfläche, drücken Sie die 2" << std:: endl << std::endl;
+    std::cout << "Kugeloberfläche, drücken Sie die 3" <<std:: endl << std::endl;
+    std::cout << "Kugelvolumen, drücken Sie die 4" <<std:: endl <<std::endl;
+    
+    std::cin >> ausgabe;
+
+
+
+
     
     return 0;
 }
