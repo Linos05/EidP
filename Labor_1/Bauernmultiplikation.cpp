@@ -18,10 +18,10 @@ int main()
     // Verarbeitung / Berechnung
     while ( 0 < a )
     {
+        rest =a % 2;
         std::cout << a << " Rest " << a % 2 << " b " << b;
         std::cout << " Zwischenergebnis: " << erg << std::endl;
         a = a / 2;
-        rest =a % 2;
         erg = erg + rest * b;
         b = b* 2;
     }
