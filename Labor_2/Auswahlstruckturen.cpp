@@ -28,8 +28,7 @@ int main()
         std::cout << "x - Programm beenden...." << std::endl << std::endl;
         std::cout << "Ihre Wahl: ";
         std::cin >> menu;
-        std::cin.ignore(10000, '\n'); // Rest der Zeile verwerfen
-
+        std::cin.ignore(10000, '\n'); 
         switch (menu)
         {
         case 'a': // Bauernmultiplikation
@@ -102,18 +101,18 @@ int main()
             }
             break;
 
-        case 'c': // Morsezeichen
+        case 'c': //Morsezeichen
 
             //Eingabe
             std::cout << "Geben Sie einen Buchstaben, eine Ziffer oder ein Satzzeichen ein: ";
             std::cin >> zeichen;
-            std::cin.ignore(10000, '\n'); // Rest der Zeile verwerfen
+            std::cin.ignore(10000, '\n');
 
             //Ausgabe
             std::cout << "Morsecode: ";
             switch (zeichen)
             {
-            // Buchstaben
+            //Buchstaben
             case 'a': case 'A': std::cout << ".-";   break;
             case 'b': case 'B': std::cout << "-..."; break;
             case 'c': case 'C': std::cout << "-.-."; break;
@@ -141,7 +140,7 @@ int main()
             case 'y': case 'Y': std::cout << "-.--"; break;
             case 'z': case 'Z': std::cout << "--.."; break;
 
-            // Ziffern
+            //Ziffern
             case '0': std::cout << "-----"; break;
             case '1': std::cout << ".----"; break;
             case '2': std::cout << "..---"; break;
@@ -153,7 +152,7 @@ int main()
             case '8': std::cout << "---.."; break;
             case '9': std::cout << "----."; break;
 
-            // Satzzeichen
+            //Satzzeichen
             case '.':  std::cout << ".-.-.-";  break;
             case ',':  std::cout << "--..--";  break;
             case '?':  std::cout << "..--.."; break;
@@ -173,7 +172,7 @@ int main()
             case '$':  std::cout << "...-..-"; break;
             case '@':  std::cout << ".--.-.";  break;
 
-            // Unbekanntes Zeichen: Irrung (8 Punkte)
+            //Unbekanntes Zeichen
             default:
                 std::cout << "........";
                 break;
@@ -181,17 +180,17 @@ int main()
             std::cout << std::endl;
             break;
 
-        case 'd': // Zweitgroesste Zahl
+        case 'd': //Zweitgroesste Zahl
             break;
 
-        case 'x': // Programmende
+        case 'x': //Programmende
             programmende = true;
             break;
 
         default:
             std::cout << "Der eingegebene Wert " << menu << " ist nicht gueltig!" << std::endl;
             break;
-        } // Ende switch
+        } //Ende switch
     } while (programmende == false);
 
     return 0;
