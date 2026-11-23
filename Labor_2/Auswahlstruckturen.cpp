@@ -1,26 +1,51 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
 	//Variablendefinitonen
 	char menu = 'x';
-	bool programmende = false;
-	// hier alle weiteren Variablen einfügen
+    bool programmende = false;
+    int a, b, erg, rest; 
+    // hier alle weiteren Variablen einfügen
 
 	do
 	{
-		cout << "a - Bauernmultiplikation" << endl;
-		cout << "b - Kreis / Kugel" << endl;
-		cout << "c - Morsezeichen" << endl;
-		cout << "d - Zweitgroesste Zahl ermitteln" << endl;
-		cout << "x - Programm beenden...." << endl << endl;
-		cout << "Ihre Wahl: ";
-		cin >> menu;
+		std::cout << "a - Bauernmultiplikation" << std::endl;
+		std::cout << "b - Kreis / Kugel" << std::endl;
+		std::cout << "c - Morsezeichen" << std::endl;
+		std::cout << "d - Zweitgroesste Zahl ermitteln" << std::endl;
+		std::cout << "x - Programm beenden...." << std::endl << std::endl;
+		std::cout << "Ihre Wahl: ";
+		std::cin >> menu;
 
 		switch (menu)
 		{
 		case 'a': // Ihre Implementation
+        //Zuruecksetzen
+        erg = 0;
+
+        //Eingabe
+        std::cout << "Russische Bauernmultiplikation" << std::endl << std::endl;
+        std::cout << "In jedem Rechenschritt wird..." << std::endl;
+        std::cout << "der esrte Faktor durch 2 dividiert." << std::endl;
+        std::cout << "Geben Sie den ersten Faktor ein: ";
+        std::cin >> a;
+        std::cout << "Geben Sie den zweiten Faktor ein: ";
+        std::cin >> b;
+
+         // Verarbeitung / Berechnung
+         while ( 0 < a )
+          {
+             rest =a % 2;
+             std::cout << a << " Rest " << a % 2 << " b " << b;
+             erg = erg + rest * b;
+             std::cout << " Zwischenergebnis: " << erg << std::endl;
+              a = a / 2;
+               b = b* 2;
+          }
+
+        //Ausgabe
+        std::cout << " Endergebnis: " << erg << std::endl;
 			break;
 		case 'b': // Ihre Implementation
 			break;
@@ -31,7 +56,7 @@ int main()
 		case 'x': // Programmende
 			programmende = true;
 			break;
-		default: cout << "Der eingegebene Wert " << menu << " ist nicht gueltig!" << endl;
+		default: std::cout << "Der eingegebene Wert " << menu << " ist nicht gueltig!" << std::endl;
 			break;
 		}// Ende switch
 	} while (programmende == false);
