@@ -19,6 +19,9 @@ int main()
     //Morsezeichen
     char zeichen;
 
+    //Zweitgroesste Zahl
+    int z, z1, z2, largest, secondLargest;
+
     do
     {
         std::cout << "a - Bauernmultiplikation" << std::endl;
@@ -181,6 +184,52 @@ int main()
             break;
 
         case 'd': //Zweitgroesste Zahl
+            
+            //Eingabe der ersten beiden Zahlen
+            std::cout << "Geben Sie die erste Zahl ein: ";
+            std::cin >> z1;
+            std::cout << "Geben Sie die zweite Zahl ein: ";
+            std::cin >> z2;
+
+            //Ermitteln der ersten beiden Zahlen
+            if (z1 >= z2) {
+                largest = z1;
+                secondLargest = z2;
+            } else {
+                largest = z2;
+                secondLargest = z1;
+            }
+
+            //Eingabe der naechsten Zahlen
+            std::cout << "Geben Sie die dritte Zahl ein: ";
+            std::cin >> z;
+            if (z >= largest) {
+                secondLargest = largest;
+                largest = z;
+            } else if (z >= secondLargest) {
+                secondLargest = z;
+            }
+
+            std::cout << "Geben Sie die vierte Zahl ein: ";
+            std::cin >> z;
+            if (z >= largest) {
+                secondLargest = largest;
+                largest = z;
+            } else if (z >= secondLargest) {
+                secondLargest = z;
+            }
+
+            std::cout << "Geben Sie die fünfte Zahl ein: ";
+            std::cin >> z;
+            if (z >= largest) {
+                secondLargest = largest;
+                largest = z;
+            } else if (z >= secondLargest) {
+                secondLargest = z;
+            }
+
+            //Ausgabe
+            std::cout << "Die zweitgrößte Zahl ist: " << secondLargest << std::endl;
             break;
 
         case 'x': //Programmende
