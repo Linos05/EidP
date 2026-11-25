@@ -177,7 +177,7 @@ int main()
 
             //Unbekanntes Zeichen
             default:
-                std::cout << "Unbekanntes Zeichen";
+                std::cout << "........";
                 break;
             }
             std::cout << std::endl;
