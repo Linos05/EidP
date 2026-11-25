@@ -20,7 +20,7 @@ int main()
     char zeichen;
 
     //Zweitgroesste Zahl
-    int z, z1, z2, largest, secondLargest;
+    double z, z1, z2, largest, secondLargest;
 
     do
     {
@@ -177,7 +177,7 @@ int main()
 
             //Unbekanntes Zeichen
             default:
-                std::cout << "........";
+                std::cout << "Unbekanntes Zeichen";
                 break;
             }
             std::cout << std::endl;
