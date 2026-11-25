@@ -6,7 +6,7 @@ int main()
     //Variablendefinitionen
     char menu = 'x';
     bool programmende = false;
-    // hier alle weiteren Variablen einfuegen
+    //hier alle weiteren Variablen einfuegen
 
     //Bauernmultiplikation
     int a, b, erg, rest;
@@ -34,7 +34,7 @@ int main()
         std::cin.ignore(10000, '\n'); 
         switch (menu)
         {
-        case 'a': // Bauernmultiplikation
+        case 'a': //Bauernmultiplikation
 
             //Zuruecksetzen
             erg = 0;
@@ -48,7 +48,7 @@ int main()
             std::cout << "Geben Sie den zweiten Faktor ein: ";
             std::cin >> b;
 
-            // Verarbeitung / Berechnung
+            //Verarbeitung / Berechnung
             while (0 < a)
             {
                 rest = a % 2;
@@ -63,17 +63,17 @@ int main()
             std::cout << " Endergebnis: " << erg << std::endl;
             break;
 
-        case 'b': // Kreis / Kugel
+        case 'b': //Kreis / Kugel
 
             //Eingabe
             std::cout << "Geben Sie einen Radius in Centimeter (cm) an: ";
             std::cin >> r;
 
             //Verarbeitung
-            ku  = 2 * r * pi;                       // Kreisumfang
-            kf  = (r * r) * pi;                     // Kreisflaeche
-            kgo = 4 * (r * r) * pi;                 // Kugeloberflaeche
-            kgv = (4.0 / 3.0) * (r * r * r) * pi;   // Kugelvolumen
+            ku  = 2 * r * pi;                       //Kreisumfang
+            kf  = (r * r) * pi;                     //Kreisflaeche
+            kgo = 4 * (r * r) * pi;                 //Kugeloberflaeche
+            kgv = (4.0 / 3.0) * (r * r * r) * pi;   //Kugelvolumen
 
             //Auswahl der Ausgabe
             std::cout << "Fuer die Ausgabe:" << std::endl;
@@ -200,9 +200,10 @@ int main()
                 secondLargest = z1;
             }
 
-            //Eingabe der naechsten Zahlen
+            //Eingabe der dritten Zahl
             std::cout << "Geben Sie die dritte Zahl ein: ";
             std::cin >> z;
+            //Ermitteln der dritten Zahl
             if (z >= largest) {
                 secondLargest = largest;
                 largest = z;
@@ -210,8 +211,10 @@ int main()
                 secondLargest = z;
             }
 
+            //Eingabe der vierten Zahl
             std::cout << "Geben Sie die vierte Zahl ein: ";
             std::cin >> z;
+            //Ermitteln der vierten Zahl
             if (z >= largest) {
                 secondLargest = largest;
                 largest = z;
@@ -219,8 +222,10 @@ int main()
                 secondLargest = z;
             }
 
-            std::cout << "Geben Sie die fünfte Zahl ein: ";
+            //Eingabe der fuenften Zahl
+            std::cout << "Geben Sie die fuenfte Zahl ein: ";
             std::cin >> z;
+            //Ermitteln der fuenften Zahl
             if (z >= largest) {
                 secondLargest = largest;
                 largest = z;
@@ -229,7 +234,7 @@ int main()
             }
 
             //Ausgabe
-            std::cout << "Die zweitgrößte Zahl ist: " << secondLargest << std::endl;
+            std::cout << "Die zweitgroeßte Zahl ist: " << secondLargest << std::endl;
             break;
 
         case 'x': //Programmende
