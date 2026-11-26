@@ -4,10 +4,10 @@ int main () {
 
     //Deklarieren der Variablen
     double z1, z2, z3, z4, z5, largest, secondLargest = 0;
-    bool haveSecond = false;
+    bool haveSecond;
 
     //Usereingabe
-    std::cout << "Geben Sie fuenf Zahlen, mit einem Leerzeichen zwischen jeder ein: ";
+    std::cout << "Geben Sie fuenf Zahlen ein: ";
     std::cin >> z1 >> z2 >> z3 >> z4 >> z5;
 
     //Pruefen der ersten beiden Variablen
@@ -64,7 +64,7 @@ int main () {
         std::cout << "Die zweitgroesste Zahl ist: " << secondLargest << std::endl;
     }
     else {
-        std::cout << "Alle Zahlen haben den gleichen Wert, draus folgt, dass es keine zweitgroesste Zahl gibt." << std::endl;
+        std::cout << "Alle Zahlen haben der gleichen Wert, draus folgt, dass es keine zweitgroesste Zahl gibt." << std::endl;
     }
 
     return 0;
