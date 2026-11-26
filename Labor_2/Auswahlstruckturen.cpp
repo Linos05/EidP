@@ -32,6 +32,11 @@ int main()
         std::cout << "x - Programm beenden...." << std::endl << std::endl;
         std::cout << "Ihre Wahl: ";
         std::cin >> menu;
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+            menu = '?';
+        }
         std::cin.ignore(10000, '\n');
         switch (menu)
         {
@@ -45,7 +50,6 @@ int main()
             std::cout << "In jedem Rechenschritt wird" << std::endl;
             std::cout << "der erste Faktor durch 2 dividiert." << std::endl;
             std::cout << "Geben Sie den ersten Faktor ein: ";
-            std::cin >> a;
             std::cin >> a;
             if (std::cin.fail())
             {
@@ -87,6 +91,14 @@ int main()
             //Eingabe
             std::cout << "Geben Sie einen Radius in Centimeter (cm) an: ";
             std::cin >> r;
+            if (std::cin.fail())
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                std::cout << "Ungueltige Eingabe!" << std::endl;
+                break;
+            }
+            std::cin.ignore(10000, '\n');
 
             //Verarbeitung
             ku  = 2 * r * pi;                       //Kreisumfang
@@ -101,6 +113,14 @@ int main()
             std::cout << "3 - Kugeloberflaeche" << std::endl;
             std::cout << "4 - Kugelvolumen" << std::endl;
             std::cin >> ausgabe;
+            if (std::cin.fail())
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                std::cout << "Ungueltige Eingabe!" << std::endl;
+                break;
+            }
+            std::cin.ignore(10000, '\n');
 
             //Ausgabe
             switch (ausgabe)
@@ -207,6 +227,14 @@ int main()
             //Usereingabe
             std::cout << "Geben Sie fuenf Zahlen, mit einem Leerzeichen zwischen jeder ein: ";
             std::cin >> z1 >> z2 >> z3 >> z4 >> z5;
+            if (std::cin.fail())
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                std::cout << "Ungueltige Eingabe!" << std::endl;
+                break;
+            }
+            std::cin.ignore(10000, '\n');
 
             //Pruefen der ersten beiden Variablen
             if (z1 > z2)
