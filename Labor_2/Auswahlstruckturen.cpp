@@ -32,7 +32,7 @@ int main()
         std::cout << "x - Programm beenden...." << std::endl << std::endl;
         std::cout << "Ihre Wahl: ";
         std::cin >> menu;
-        std::cin.ignore(10000, '\n'); 
+        std::cin.ignore(10000, '\n');
         switch (menu)
         {
         case 'a': //Bauernmultiplikation
@@ -46,8 +46,26 @@ int main()
             std::cout << "der erste Faktor durch 2 dividiert." << std::endl;
             std::cout << "Geben Sie den ersten Faktor ein: ";
             std::cin >> a;
+            std::cin >> a;
+            if (std::cin.fail())
+            {
+                std::cin.clear();                        // Fehlerzustand zuruecksetzen
+                std::cin.ignore(10000, '\n');            // falsche Eingabe verwerfen
+                std::cout << "Ungueltige Eingabe!" << std::endl;
+                break;                                   // zurueck zum Menue
+            }
+            std::cin.ignore(10000, '\n');
+
             std::cout << "Geben Sie den zweiten Faktor ein: ";
             std::cin >> b;
+            if (std::cin.fail())
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                std::cout << "Ungueltige Eingabe!" << std::endl;
+                break;
+            }
+            std::cin.ignore(10000, '\n');
 
             //Verarbeitung / Berechnung
             while (0 < a)
@@ -185,67 +203,78 @@ int main()
             break;
 
         case 'd': //Zweitgroesste Zahl
-            
+
             //Usereingabe
-    std::cout << "Geben Sie fuenf Zahlen, mit einem Leerzeichen zwischen jeder ein: ";
-    std::cin >> z1 >> z2 >> z3 >> z4 >> z5;
+            std::cout << "Geben Sie fuenf Zahlen, mit einem Leerzeichen zwischen jeder ein: ";
+            std::cin >> z1 >> z2 >> z3 >> z4 >> z5;
 
-    //Pruefen der ersten beiden Variablen
-    if (z1 > z2) {
-        largest = z1;
-        secondLargest = z2;
-        haveSecond = true;
-    }
-    else if (z2 > z1) {
-        largest = z2;
-        secondLargest = z1;
-        haveSecond = true;
-    }
-    else {
-        largest = z1;
-        haveSecond = false;
-    }
+            //Pruefen der ersten beiden Variablen
+            if (z1 > z2)
+            {
+                largest = z1;
+                secondLargest = z2;
+                haveSecond = true;
+            }
+            else if (z2 > z1)
+            {
+                largest = z2;
+                secondLargest = z1;
+                haveSecond = true;
+            }
+            else
+            {
+                largest = z1;
+                haveSecond = false;
+            }
 
-    //Pruefen der dritten Variable
-    if (z3 > largest) {
-        secondLargest = largest;
-        largest = z3;
-        haveSecond = true;
-    }
-    else if (z3 < largest && (!haveSecond or (z3 > secondLargest))) {
-        secondLargest = z3;
-        haveSecond = true;
-    }
+            //Pruefen der dritten Variable
+            if (z3 > largest)
+            {
+                secondLargest = largest;
+                largest = z3;
+                haveSecond = true;
+            }
+            else if (z3 < largest && (!haveSecond or (z3 > secondLargest)))
+            {
+                secondLargest = z3;
+                haveSecond = true;
+            }
 
-    //Pruefen der vierten Variable
-    if (z4 > largest) {
-        secondLargest = largest;
-        largest = z4;
-        haveSecond = true;
-    }
-    else if (z4 < largest && (!haveSecond or (z4 > secondLargest))) {
-        secondLargest = z4;
-        haveSecond = true;
-    }
+            //Pruefen der vierten Variable
+            if (z4 > largest)
+            {
+                secondLargest = largest;
+                largest = z4;
+                haveSecond = true;
+            }
+            else if (z4 < largest && (!haveSecond or (z4 > secondLargest)))
+            {
+                secondLargest = z4;
+                haveSecond = true;
+            }
 
-    //Pruefen der fuenften Variable
-    if (z5 > largest) {
-        secondLargest = largest;
-        largest = z5;
-        haveSecond = true;
-    }
-    else if (z5 < largest && (!haveSecond or (z5 > secondLargest))) {
-        secondLargest = z5;
-        haveSecond = true;
-    }
+            //Pruefen der fuenften Variable
+            if (z5 > largest)
+            {
+                secondLargest = largest;
+                largest = z5;
+                haveSecond = true;
+            }
+            else if (z5 < largest && (!haveSecond or (z5 > secondLargest)))
+            {
+                secondLargest = z5;
+                haveSecond = true;
+            }
 
-    //Wenn es eine zweitgroesste gibt Printen
-    if (haveSecond) {
-        std::cout << "Die zweitgroesste Zahl ist: " << secondLargest << std::endl;
-    }
-    else {
-        std::cout << "Alle Zahlen haben den gleichen Wert, draus folgt, dass es keine zweitgroesste Zahl gibt." << std::endl;
-    }
+            //Wenn es eine zweitgroesste gibt Printen
+            if (haveSecond)
+            {
+                std::cout << "Die zweitgroesste Zahl ist: " << secondLargest << std::endl;
+            }
+            else
+            {
+                std::cout << "Alle Zahlen haben den gleichen Wert, draus folgt, dass es keine zweitgroesste Zahl gibt." << std::endl;
+            }
             break;
 
         case 'x': //Programmende
