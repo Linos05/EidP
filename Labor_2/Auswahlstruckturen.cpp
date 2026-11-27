@@ -30,9 +30,9 @@ int main() {
         std::cout << "x - Programm beenden...." << std::endl << std::endl;
         std::cout << "Ihre Wahl: ";
         std::cin >> menu;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            menu = '?';
+        if (std::cin.fail()) {                             // Abfrage ob Fehlgeschlagen
+            std::cin.clear();                              // Fehlerzustand zurücksetzen
+            menu = '?';                                    // zurueck zu default
         }
         std::cin.ignore(10000, '\n');
         switch (menu) {
